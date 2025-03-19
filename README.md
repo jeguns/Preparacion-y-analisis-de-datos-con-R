@@ -8,6 +8,15 @@ Curso de extensión ofrecido desde el Departamento Académico de Estadistica Inf
 - El 24 de marzo la clase será de 8 a 10 pm
 
 ## Programación de contenidos
+|   **Fecha**  | **Horas** |                                  **Tema**                                  |
+|:------------:|:---------:|:--------------------------------------------------------------------------:|
+|   Lunes 24   |     2     |                            Manejo de datos dplyr                           |
+|   Martes 25  |     3     |          Transformación de estructuras de datos con dplyr y tidyr          |
+| Miércoles 26 |     3     | Manejo de fechas con lubridate Manipulación de datos textuales con stringr |
+|   Jueves 27  |     3     |   Inferencia estadística: Intervalos de confianza y pruebas de hipótesis   |
+|   Lunes 31   |     3     |                              Regresión Lineal                              |
+|   Martes 01  |     3     |                              Regresión Lineal                              |
+| Miércoles 02 |     3     |                    Generación de reportes con RMarkdown                    |
 
 ## Software
 
