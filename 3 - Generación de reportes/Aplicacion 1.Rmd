@@ -1,0 +1,113 @@
+---
+title: "Aplicación de regresión"
+author: "Jesus Gamboa"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Una organización ambiental desea analizar los factores que influyen en la temperatura de una zona urbana durante distintos días del año. Para ello, ha recopilado datos diarios sobre las siguientes variables:
+
+-   **Temperatura** $(^oC)$ variable dependiente, representa la temperatura media del día
+-   *Humedad* (%): porcentaje de humedad relativa
+-   Velocidad del viento $(m/s)$: medida de la intensidad del viento.
+-   Radiación solar $(W/m^2)$: cantidad de energía solar incidente.
+-   Contaminación (AQI): índice de calidad del aire (a mayor valor, peor calidad).
+
+$$R_{n} = R_{s\downarrow} - \alpha R_{s\downarrow} + R_{L\downarrow}-R_{L\uparrow}-(1-\epsilon_0)R_{L\downarrow}$$ $$\frac{G}{R_n}$$
+
+```{r}
+a = c(3,6,3,6,3)
+a |> mean()
+```
+
+La media es 4.2
+
+```{r}
+a = c(3,6,3,6,3)
+a |> median()
+```
+
+Ahora, voy a colocar echo=FALSE. Se oculta el código y solo muestra el resultado:
+
+```{r echo=FALSE}
+a = c(3,6,3,6,3)
+a |> median()
+```
+
+Probando, eval = FALSE. No ejecuta el código (no lo evalúa), solo muestra el código y no el resultado.
+
+```{r eval=FALSE}
+a = c(3,6,3,6,3)
+a |> median()
+```
+
+Probando include=FALSE. No incluye el chunk:
+
+```{r include=FALSE}
+a = c(3,6,3,6,3)
+a |> median()
+```
+
+`x + y - z`
+
+`a = "Hola mundo"`
+
+# 
+
+[Congreso de Estadística y Ciencia de Datos](https://sites.google.com/view/congreso-de-estadistica-2025/presentaci%C3%B3n?authuser=0)
+
+[Este texto está en Georgia]{style="font-family: Georgia;"}
+
+[Fuente tipo Comic Sans Ms]{style="font-family: Comic Sans Ms;"}
+
+[Fuente tipo Times New Roman]{style="font-family: Times New Roman;"}
+
+[Fuente tipo Arial]{style="font-family: Arial;"}
+
+## Pregunta 1
+
+Ajusta un modelo de regresión lineal donde la variable dependiente sea Temperatura, y las variables independientes sean Humedad, Velocidad del viento, Radiación solar y Contaminación.
+
+```{r}
+datos = read.csv("Ambiental.csv")
+datos |> head()
+plot(datos$Humedad,datos$Temperatura, pch = 16)
+modelo = lm(Temperatura ~ ., datos)
+modelo |> coef()
+```
+
+## Pregunta 2
+
+**Escribe la ecuación del modelo estimado.**
+
+$$Y=10.1+0.1055X_1-0.412X_2+0.02X_3-0.0325X_4$$ donde:
+
+-   $Y$: Temperatura
+
+-   $X_1$: Humedad
+
+-   $X_2$: Velocidad del viento
+
+-   $X_3$: Radiación solar
+
+-   $X_4$: Contaminación
+
+$$\text{Imagen}$$
+
+
+![](images/clipboard-3637355708.png){width="10.8cm"}
+
+
+## Pregunta 4
+
+Probar la significancia del modelo
+
+```{r}
+modelo |> summary()
+```
+
+Dado que $pv < \alpha$, se rechaza $H_0$, lo que nos da a entender que al menos una variable contribuye significativamente al modelo lineal.

@@ -1,0 +1,46 @@
+---
+title: "Aplicacion 2"
+author: "Jesus Gamboa"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introducción
+
+## Introducción
+
+Este texto es introductorio. Esta es la primera diapositiva.
+
+## Ejercicio
+
+Una organización ambiental desea analizar los factores que influyen en la temperatura de una zona urbana durante distintos días del año. Para ello, ha recopilado datos diarios sobre las siguientes variables:
+
+-   **Temperatura** $(^oC)$ variable dependiente, representa la temperatura media del día
+-   *Humedad* (%): porcentaje de humedad relativa
+-   Velocidad del viento $(m/s)$: medida de la intensidad del viento.
+-   Radiación solar $(W/m^2)$: cantidad de energía solar incidente.
+-   Contaminación (AQI): índice de calidad del aire (a mayor valor, peor calidad).
+
+## 
+
+$$R_{n} = R_{s\downarrow} - \alpha R_{s\downarrow} + R_{L\downarrow}-R_{L\uparrow}-(1-\epsilon_0)R_{L\downarrow}$$ $$\frac{G}{R_n}$$
+
+# Marco teórico
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+# Metodología
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```

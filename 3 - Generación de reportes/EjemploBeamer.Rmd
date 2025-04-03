@@ -1,0 +1,65 @@
+---
+title: "Untitled"
+subtitle: "Capítulo 1: Manipulación avanzada de datos"
+author: "Jesus Gamboa"
+date: "`r Sys.Date()`"
+classoption: "aspectratio=169"
+output: beamer_presentation
+header-includes: 
+  - \usepackage{graphicx}
+  - \usepackage{lipsum}  # Este es solo un ejemplo para texto
+  - |
+    \setbeamertemplate{title page}{
+      \begin{minipage}[t]{0.10\paperwidth}  % Ajusta el tamaño de la minipágina para el logo
+        \includegraphics[width=\linewidth]{logop.jpg}\par\vspace{0.5cm}
+      \end{minipage}%
+      \hfill  % Esto genera espacio entre las dos minipáginas
+      \begin{minipage}[t]{0.75\textwidth}  % El resto del espacio se ocupa para el contenido centrado
+        \vspace{-1cm}  % Ajusta si es necesario
+        {\usebeamerfont{title}\inserttitle\par}
+        {\usebeamerfont{subtitle}\insertsubtitle\par}
+        {\usebeamerfont{author}\insertauthor\par}
+        {\usebeamerfont{date}\insertdate\par}
+      \end{minipage}
+    }
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+# Introducción
+
+## Introducción
+
+Este texto es introductorio. Esta es la primera diapositiva.
+
+## Ejercicio
+
+Una organización ambiental desea analizar los factores que influyen en la temperatura de una zona urbana durante distintos días del año. Para ello, ha recopilado datos diarios sobre las siguientes variables:
+
+-   **Temperatura** $(^oC)$ variable dependiente, representa la temperatura media del día
+-   *Humedad* (%): porcentaje de humedad relativa
+-   Velocidad del viento $(m/s)$: medida de la intensidad del viento.
+-   Radiación solar $(W/m^2)$: cantidad de energía solar incidente.
+-   Contaminación (AQI): índice de calidad del aire (a mayor valor, peor calidad).
+
+$$R_{n} = R_{s\downarrow} - \alpha R_{s\downarrow} + R_{L\downarrow}-R_{L\uparrow}-(1-\epsilon_0)R_{L\downarrow}$$ $$\frac{G}{R_n}$$
+
+# Marco teórico
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+# Metodología
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
